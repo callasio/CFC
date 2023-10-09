@@ -10,8 +10,8 @@ driver = ThreadSafeDriver()
 def enter(contest_number):
     print("From server - enter:", contest_number)
     contest_url = f"https://codeforces.com/contest/{contest_number}"
-    driver.driver.get(contest_url)
-    return f"contest {contest_number}"
+    driver.enter(contest_url)
+    return f"Successfully entered"
 
 
 @app.route('/q', methods=['GET'])
